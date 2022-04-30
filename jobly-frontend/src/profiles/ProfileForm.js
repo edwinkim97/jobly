@@ -90,64 +90,63 @@ function ProfileForm() {
 
   return (
     <div className="ProfileForm col-md-6 col-lg-4 offset-md-3 offset-lg-4">
-      <h3>Profile</h3>
-      <div className="card">
-        <div className="card-body">
-          <form>
-            <div className="mb-3">
-              <label className="form-label">Username</label>
-              <input
-                disabled
-                className="form-control"
-                placeholder={formData.username}
-              />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">First Name</label>
-              <input
-                name="firstName"
-                className="form-control"
-                value={formData.firstName}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Last Name</label>
-              <input
-                name="lastName"
-                className="form-control"
-                value={formData.lastName}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Email</label>
-              <input
-                name="email"
-                className="form-control"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
+      <h1>Profile</h1>
+        <form>
+      <div className="form-group">
+          <div className="mb-3">
+            <label className="form-label">Username</label>
+            <input
+              disabled
+              className="form-control"
+              placeholder={formData.username}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">First Name</label>
+            <input
+              name="firstName"
+              className="form-control"
+              value={formData.firstName}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Last Name</label>
+            <input
+              name="lastName"
+              className="form-control"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Email</label>
+            <input
+              name="email"
+              className="form-control"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
 
-            {formErrors.length
-              ? <Alert type="danger" messages={formErrors} />
-              : null}
+          {formErrors.length
+            ? <Alert type="danger" messages={formErrors} />
+            : null}
 
-            {saveConfirmed
-              ?
-              <Alert type="success" messages={["Updated successfully."]} />
-              : null}
+          {saveConfirmed
+            ?
+            <Alert type="success" messages={["Updated successfully."]} />
+            : null}
 
-            <div className="d-grid">
-              <button className="btn btn-primary" onClick={handleSubmit}>
-                Save Changes
-              </button>
-            </div>
+          <div className="d-grid">
+            <button className="btn btn-primary" onClick={handleSubmit}>
+              Save Changes
+            </button>
+          </div>
 
-          </form>
-        </div>
       </div>
+        </form>
+
     </div>
   );
 }
