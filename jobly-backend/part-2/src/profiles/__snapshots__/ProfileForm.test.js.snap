@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ProfileForm col-md-6 col-lg-4 offset-md-3 offset-lg-4"
+  >
+    <h3>
+      Profile
+    </h3>
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <form>
+          <div
+            class="mb-3"
+          >
+            <label
+              class="form-label"
+            >
+              Username
+            </label>
+            <input
+              class="form-control"
+              disabled=""
+              placeholder="testuser"
+            />
+          </div>
+          <div
+            class="mb-3"
+          >
+            <label
+              class="form-label"
+            >
+              First Name
+            </label>
+            <input
+              class="form-control"
+              name="firstName"
+              value=""
+            />
+          </div>
+          <div
+            class="mb-3"
+          >
+            <label
+              class="form-label"
+            >
+              Last Name
+            </label>
+            <input
+              class="form-control"
+              name="lastName"
+              value=""
+            />
+          </div>
+          <div
+            class="mb-3"
+          >
+            <label
+              class="form-label"
+            >
+              Email
+            </label>
+            <input
+              class="form-control"
+              name="email"
+              value="test@test.net"
+            />
+          </div>
+          <div
+            class="mb-3"
+          >
+            <label
+              class="form-label"
+            >
+              Confirm password to make changes:
+            </label>
+            <input
+              class="form-control"
+              name="password"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="d-grid"
+          >
+            <button
+              class="btn btn-primary"
+            >
+              Save Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
