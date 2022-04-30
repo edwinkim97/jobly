@@ -38,7 +38,7 @@ function JobCard({ id, title, salary, equity, companyName }) {
         {salary && <div><small>Salary: {formatSalary(salary)}</small></div>}
         {equity !== undefined && <div><small>Equity: {equity}</small></div>}
         <button
-          className="btn btn-danger fw-bold text-uppercase float-end"
+          className="btn btn-secondary fw-bold text-uppercase float-end"
           onClick={handleApply}
           disabled={applied}
         >

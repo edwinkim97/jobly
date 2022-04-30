@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Nav, Navbar, NavbarBrand } from "react-bootstrap";
 import UserContext from "../auth/UserContext";
 import "./Navigation.css";
 
@@ -60,7 +61,7 @@ function Navigation({ logout }) {
   }
 
   return (
-    <nav className="Navigation navbar navbar-expand-md">
+    <nav className="Navigation navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Jobly

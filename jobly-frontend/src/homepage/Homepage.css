@@ -7,3 +7,9 @@
     text-shadow: 2px 2px 5px rgb(52, 48, 47);
 }
   
+.homepage-header {
+    background-color: rgba(10, 34, 52, 0.7);
+    width: 60%;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+}

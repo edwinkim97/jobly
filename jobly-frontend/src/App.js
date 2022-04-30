@@ -6,7 +6,7 @@ import Routes from "./routes-nav/Routes";
 import LoadingSpinner from "./common/LoadingSpinner";
 import JoblyApi from "./api/api";
 import UserContext from "./auth/UserContext";
-import jwt from "jsonwebtoken";
+import jwtDecode from "jwt-decode";
 
 // Key name for storing token in localStorage for "remember me" re-login
 export const TOKEN_STORAGE_ID = "jobly-token";
@@ -59,7 +59,7 @@ function App() {
     async function getCurrentUser() {
       if (token) {
         try {
-          let { username } = jwt.decode(token);
+          let { username } = jwtDecode(token);
           // put the token on the Api class so it can use it to call the API.
           JoblyApi.token = token;
           let currentUser = await JoblyApi.getCurrentUser(username);
