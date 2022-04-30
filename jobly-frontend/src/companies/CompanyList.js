@@ -3,6 +3,7 @@ import SearchForm from "../common/SearchForm";
 import JoblyApi from "../api/api";
 import CompanyCard from "./CompanyCard";
 import LoadingSpinner from "../common/LoadingSpinner";
+import "./CompanyList.css";
 
 /** Show page with list of companies.
  *
@@ -34,7 +35,12 @@ function CompanyList() {
 
   return (
     <div className="CompanyList col-md-8 offset-md-2">
-      <SearchForm searchFor={search} />
+      <div className="d-flex justify-content-center mb-5">
+        <div className="Jobly-Search-Card">
+          <h1>Companies</h1>
+          <SearchForm searchFor={search} />
+        </div>
+      </div>
       {companies.length
         ? (
           <div className="CompanyList-list">

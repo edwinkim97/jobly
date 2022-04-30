@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Search from "../common/SearchForm";
+import SearchForm from "../common/SearchForm";
 import JoblyApi from "../api/api";
 import JobCardList from "./JobCardList";
 import LoadingSpinner from "../common/LoadingSpinner";
+import "./JobList.css";
 
 /** Show page with list of jobs.
  *
@@ -34,7 +35,12 @@ function JobList() {
 
   return (
     <div className="JobList col-md-8 offset-md-2">
-      <Search searchFor={search} />
+      <div className="d-flex justify-content-center mb-5">
+        <div className="Jobly-Search-Card">
+          <h1>Jobs</h1>
+          <SearchForm searchFor={search} />
+        </div>
+      </div>
       {jobs.length
         ? <JobCardList jobs={jobs} />
         : <p className="lead">Sorry, no results were found!</p>

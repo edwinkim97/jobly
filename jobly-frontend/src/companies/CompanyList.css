@@ -1,0 +1,12 @@
+h1 {
+    color: #fff;
+}
+
+.Jobly-Search-Card {
+    background-color: rgba(10, 34, 52, 0.7);
+    padding: 1rem 1rem;
+    width: 60%;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+}
