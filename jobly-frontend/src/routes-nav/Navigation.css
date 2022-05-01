@@ -1,9 +1,19 @@
-.Navigation {
-    background-color: white;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
-  }
-  
-  .nav-link.active {
-    font-weight: bold;
-    color: black;
-  }
+.navbar-expand-md {
+  width: 100%;
+  padding: 1rem;
+  flex-direction: row;
+  margin-bottom: 0px;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar {
+  margin-bottom: 2rem;
+  margin-top: -0.25rem;
+}
+
+.navbar-brand h4 {
+  color: white;
+}

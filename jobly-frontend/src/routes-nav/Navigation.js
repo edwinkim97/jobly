@@ -16,60 +16,46 @@ function Navigation({ logout }) {
   const { currentUser } = useContext(UserContext);
   console.debug("Navigation", "currentUser=", currentUser);
 
-  function loggedInNav() {
-    return (
-      <ul className="navbar-nav ms-auto">
-        <li className="nav-item me-4">
-          <NavLink className="nav-link" to="/companies">
-            Companies
-          </NavLink>
-        </li>
-        <li className="nav-item me-4">
-          <NavLink className="nav-link" to="/jobs">
-            Jobs
-          </NavLink>
-        </li>
-        <li className="nav-item me-4">
-          <NavLink className="nav-link" to="/profile">
-            Profile
-          </NavLink>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/" onClick={logout}>
-            Log out {currentUser.first_name || currentUser.username}
-          </Link>
-        </li>
-      </ul>
-    );
-  }
-
-  function loggedOutNav() {
-    return (
-      <ul className="navbar-nav ms-auto">
-        <li className="nav-item me-4">
-          <NavLink className="nav-link" to="/login">
-            Login
-          </NavLink>
-        </li>
-        <li className="nav-item me-4">
-          <NavLink className="nav-link" to="/signup">
-            Sign Up
-          </NavLink>
-        </li>
-      </ul>
-    );
-  }
-
+  
   return (
-    <nav className="Navigation navbar navbar-expand-md navbar-dark bg-dark">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          Jobly
-        </Link>
-        {currentUser ? loggedInNav() : loggedOutNav()}
-      </div>
-    </nav>
-  );
+    <Navbar expand="lg">
+        <Nav className="Navigation navbar navbar-custom navbar-expand-md navbar-dark bg-dark">
+            <NavbarBrand as={Link} className="brand" to="/" >Jobly</NavbarBrand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+
+                {currentUser &&
+                    <div className="navbar-nav mr-auto">
+                        <Nav.Item className="nav-item mr-4">
+                            <NavLink className="nav-link" exact to="/companies" >Companies</NavLink>
+                        </Nav.Item>
+                        <Nav.Item className="nav-item mr-4">
+                            <NavLink className="nav-link" exact to="/jobs" >Jobs</NavLink>
+                        </Nav.Item>
+                        <Nav.Item className="nav-item mr-4">
+                            <NavLink className="nav-link" exact to="/applications" >Applications</NavLink>
+                        </Nav.Item>
+                        <Nav.Item className="nav-item mr-4">
+                            <NavLink className="nav-link" exact to="/profile" >Profile</NavLink>
+                        </Nav.Item>
+                        <Nav.Item className="nav-item mr-4">
+                            <a className="nav-link" href="/" onClick={logout}>Log out {currentUser.username}</a>
+                        </Nav.Item>
+                    </div>}
+                {!currentUser &&
+                    <div className="navbar-nav mr-auto">
+                        <Nav.Item className="nav-item mr-4">
+                            <NavLink className="nav-link" exact to="/login">Login</NavLink>
+                        </Nav.Item>
+                        <Nav.Item className="nav-item mr-4">
+                            <NavLink className="nav-link" exact to="/signup">Sign Up</NavLink>
+                        </Nav.Item>
+                    </div>
+                }
+            </Navbar.Collapse>
+        </Nav>
+    </Navbar>
+)
 }
 
 export default Navigation;
