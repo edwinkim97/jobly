@@ -115,18 +115,6 @@ function App() {
     setGoRedirect(true);
   }
 
-  /** Checks if a job has been applied for. */
-  function hasAppliedToJob(id) {
-    return applicationIds.has(id);
-  }
-
-  /** Apply to a job: make API call and update set of application IDs. */
-  function applyToJob(id) {
-    if (hasAppliedToJob(id)) return;
-    JoblyApi.applyToJob(currentUser.username, id);
-    setApplicationIds(new Set([...applicationIds, id]));
-  }
-
   // after login/signup success, redirect to /companies
   if (goRedirect) return <Redirect push to="/companies" />;
 
@@ -136,9 +124,7 @@ function App() {
     <UserContext.Provider
       value={{
         currentUser,
-        setCurrentUser,
-        hasAppliedToJob,
-        applyToJob,
+        setCurrentUser
       }}>
       <div className="App">
         <Navigation logout={logout} />

@@ -1,6 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./JobCard.css";
 import UserContext from "../auth/UserContext";
+import JoblyApi from "../api/api";
 
 /** Show limited information about a job.
  *
@@ -14,36 +15,34 @@ import UserContext from "../auth/UserContext";
 function JobCard({ id, title, salary, equity, companyName }) {
   console.debug("JobCard");
 
-  const { hasAppliedToJob, applyToJob } = useContext(UserContext);
-  const [applied, setApplied] = useState();
+  const { currentUser, setCurrentUser } = useContext(UserContext);
 
-  React.useEffect(function updateAppliedStatus() {
-    console.debug("JobCard useEffect updateAppliedStatus", "id=", id);
-
-    setApplied(hasAppliedToJob(id));
-  }, [id, hasAppliedToJob]);
-
-  /** Apply for a job */
-  async function handleApply(evt) {
-    if (hasAppliedToJob(id)) return;
-    applyToJob(id);
-    setApplied(true);
+  async function handleSubmit() {
+   
+    let jobId = +id;
+    await JoblyApi.applyToJob(currentUser.username, jobId);
+   
+    let updatedUser = await JoblyApi.getCurrentUser(currentUser.username)
+    setCurrentUser(updatedUser);
   }
 
   return (
-    <div className="JobCard card"> {applied}
+    <div className="JobCard card">
       <div className="card-body">
         <h6 className="card-title">{title}</h6>
         <p>{companyName}</p>
         {salary && <div><small>Salary: {formatSalary(salary)}</small></div>}
         {equity !== undefined && <div><small>Equity: {equity}</small></div>}
-        <button
-          className="btn btn-secondary fw-bold text-uppercase float-end"
-          onClick={handleApply}
-          disabled={applied}
-        >
-          {applied ? "Applied" : "Apply"}
-        </button>
+        {!currentUser.applications.includes(id)
+          ?
+          <button className="btn btn-primary btn-sm apply-btn"
+            onClick={handleSubmit}
+          >
+            Apply
+          </button>
+          :
+          <div className="applied"><p>Applied!</p></div>
+        }
       </div>
     </div>
   );
