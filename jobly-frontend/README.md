@@ -1,12 +1,8 @@
 # Jobly React Frontend
 
-# About the Application
+## About
 
-This is the frontend for a simple job board app. Register as a new user to view 
-a list of companies and jobs. Login with same credentials to view companies and
-jobs.
-
-This repo is an Express backend deployed with Heroku. 
+This is the React frontend for Jobly deployed with Surge. 
 
 ## [Live Demo]()
 
@@ -20,7 +16,9 @@ This repo is an Express backend deployed with Heroku.
 1. `npm start`
 
 - Runs the app in the development mode.
-  Open [http://localhost:3000](http://localhost:3000) to view it in browser.
+- Open [http://localhost:3000](http://localhost:3000) to view it in browser.
+
+---
 
 # Getting Started with Create React App
 
