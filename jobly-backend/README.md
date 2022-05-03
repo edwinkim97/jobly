@@ -8,6 +8,8 @@ This is the Express backend for Jobly deployed with Heroku.
 
 # Getting Started on the Development Server
 
+### In your terminal run these commands:
+
 1. clone the repo
 2. `cd jobly-backend`
 3. `cd express-backend`
