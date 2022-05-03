@@ -35,13 +35,17 @@ function JobCard({ id, title, salary, equity, companyName }) {
         {equity !== undefined && <div><small>Equity: {equity}</small></div>}
         {!currentUser.applications.includes(id)
           ?
-          <button className="btn btn-primary btn-sm apply-btn"
+          <button className="btn btn-primary btn-sm apply-btn mt-2"
             onClick={handleSubmit}
           >
             Apply
           </button>
           :
-          <div className="applied"><p>Applied!</p></div>
+          <button className="btn btn-primary btn-sm apply-btn mt-2"
+            disabled="true"
+          >
+            Applied!
+          </button>
         }
       </div>
     </div>

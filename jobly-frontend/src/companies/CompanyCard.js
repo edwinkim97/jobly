@@ -14,7 +14,8 @@ function CompanyCard({ name, description, logoUrl, handle }) {
   console.debug("CompanyCard", logoUrl);
 
   return (
-    <Link className="CompanyCard card" to={`/companies/${handle}`}>
+    <div className="CompanyCard Card">
+    <Link to={`/companies/${handle}`}>
       <div className="card-body">
         <h6 className="card-title">
           {name}
@@ -25,6 +26,7 @@ function CompanyCard({ name, description, logoUrl, handle }) {
         <p><small>{description}</small></p>
       </div>
     </Link>
+    </div>
   );
 }
 

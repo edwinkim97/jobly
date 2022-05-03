@@ -26,7 +26,7 @@ function Routes({ login, signup }) {
   );
 
   return (
-    <div className="pt-5">
+    <div className="pt-3">
       <Switch>
 
         <Route exact path="/">

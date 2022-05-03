@@ -1,0 +1,13 @@
+.Applications-Header {
+    background-color: rgba(10, 34, 52, 0.7);
+    padding: 1rem 1rem;
+    width: 60%;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+}
+
+h1.Applications-Header, p.lead {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgb(52, 48, 47);
+}

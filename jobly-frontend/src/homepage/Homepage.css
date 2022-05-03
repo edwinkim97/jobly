@@ -10,6 +10,7 @@
 .homepage-header {
     background-color: rgba(10, 34, 52, 0.7);
     width: 60%;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 10px;
+    margin-bottom: 10rem;
 }
