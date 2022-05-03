@@ -23,5 +23,5 @@ This is the Express backend for Jobly deployed with Heroku.
 1. `npm start`
 
 - Runs the app in the development mode.
-- Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
-- You can make requests to the endpoints with API Clients such as Insomnia
+- You can make requests to [http://localhost:3001](http://localhost:3001) and the 
+    app's various endpoints with API Clients such as Insomnia.
