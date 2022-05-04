@@ -4,8 +4,6 @@
 
 This is the React frontend for Jobly deployed with Surge. 
 
-## [Live Demo]()
-
 # Getting Started on the Development Server
 
 1. clone the repo

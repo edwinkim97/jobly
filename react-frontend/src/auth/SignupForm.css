@@ -1,4 +1,22 @@
-.SignupForm h2 {
+.Jobly-Form {
+    padding: 2rem 4rem;
+    margin-bottom: 4rem;
+    background-color: rgba(10, 34, 52, 0.7);
+    border-radius: 10px;
+}
+
+.Jobly-Form label {
     color: #ffffff;
     text-shadow: 2px 2px 5px rgb(52, 48, 47);
+}
+
+.Jobly-Form h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgb(52, 48, 47);
+    text-align: center;
+}
+
+
+.form-control {
+    margin-bottom: 1rem;
 }

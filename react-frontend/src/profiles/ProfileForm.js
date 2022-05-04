@@ -89,7 +89,7 @@ function ProfileForm() {
   }
 
   return (
-    <div className="ProfileForm col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+    <div className="Jobly-Form col-md-6 col-lg-4 offset-md-3 offset-lg-4">
       <h1>Profile</h1>
         <form>
       <div className="form-group">

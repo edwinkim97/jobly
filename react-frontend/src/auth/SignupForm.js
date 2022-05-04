@@ -49,75 +49,69 @@ function SignupForm({ signup }) {
   }
 
   return (
-    <div className="SignupForm">
-      <div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-        <h2 className="mb-3">Sign Up</h2>
-        <div className="card">
-          <div className="card-body">
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label className="form-label">Username</label>
-                <input
-                  name="username"
-                  className="form-control"
-                  value={formData.username}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  className="form-control"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className="mb-3">
-                <label className="form-label">First name</label>
-                <input
-                  name="firstName"
-                  className="form-control"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Last name</label>
-                <input
-                  name="lastName"
-                  className="form-control"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label className="form-label">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  className="form-control"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
-
-              {formErrors.length
-                ? <Alert type="danger" messages={formErrors} />
-                : null
-              }
-
-              <div className="d-grid">
-                <button className="btn btn-primary" onClick={handleSubmit}>
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
+    <div className="Jobly-Form col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+      <h1 className="mb-3">Sign Up</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label className="form-label">Username</label>
+          <input
+            name="username"
+            className="form-control"
+            value={formData.username}
+            onChange={handleChange}
+          />
         </div>
-      </div>
+        <div className="mb-3">
+          <label className="form-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            className="form-control"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">First name</label>
+          <input
+            name="firstName"
+            className="form-control"
+            value={formData.firstName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Last name</label>
+          <input
+            name="lastName"
+            className="form-control"
+            value={formData.lastName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            className="form-control"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </div>
+
+        {formErrors.length
+          ? <Alert type="danger" messages={formErrors} />
+          : null
+        }
+
+        <div className="d-grid">
+          <button className="btn btn-primary" onClick={handleSubmit}>
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
