@@ -5,6 +5,8 @@
 This is the frontend for a simple job board app. Find the backend 
 [here](https://github.com/edwinkim97/jobly-backend).
 
+## [Live Demo]()
+
 Features of the app include:
 - Register as a new user.
 - View a list of companies and jobs. 
