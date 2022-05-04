@@ -2,7 +2,10 @@
 
 ## About
 
-This is the frontend for a simple job board app. 
+This is the frontend for a simple job board app. Find the backend 
+[here](https://github.com/edwinkim97/jobly-backend).
+
+Features of the app include:
 - Register as a new user.
 - View a list of companies and jobs. 
 - Choose which jobs you want to apply to and click the "Apply" button for that job. 

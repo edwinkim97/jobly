@@ -7,11 +7,12 @@ const demoUser = {
   last_name: "testlast",
   email: "test@test.net",
   photo_url: null,
+  applications: [],
 };
 
 const UserProvider =
-    ({ children, currentUser = demoUser, hasAppliedToJob = () => false }) => (
-    <UserContext.Provider value={{ currentUser, hasAppliedToJob }}>
+    ({ children, currentUser = demoUser }) => (
+    <UserContext.Provider value={{ currentUser }}>
       {children}
     </UserContext.Provider>
 );
