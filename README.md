@@ -8,7 +8,7 @@ This is the frontend for a simple job board app. Find the backend
 Please navigate to the `react-frontend` folder for instructions on how to start 
 the development server.
 
-## [Live Demo]()
+## [Live Demo](https://edwinkim-demo-jobly.surge.sh/)
 
 Features of the app include:
 - Register as a new user.
