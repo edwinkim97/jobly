@@ -42,7 +42,7 @@ function JobCard({ id, title, salary, equity, companyName }) {
           </button>
           :
           <button className="btn btn-primary btn-sm apply-btn mt-2"
-            disabled="true"
+            disabled={true}
           >
             Applied!
           </button>
