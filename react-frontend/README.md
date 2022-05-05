@@ -6,6 +6,8 @@ This is the React frontend for Jobly deployed with Surge.
 
 # Getting Started on the Development Server
 
+### In your terminal run these commands:
+
 1. clone the repo
 2. `cd jobly-frontend`
 3. `cd react-frontend`
@@ -18,12 +20,12 @@ This is the React frontend for Jobly deployed with Surge.
 - Open [http://localhost:3000](http://localhost:3000) to view it in browser.
 
 ### Testing the app
-To test the entire app:
+#### To test the entire app:
 
 1. `cd react-frontend`
 2. `npm test`
 
-To test a specific folder:
+#### To test a specific folder:
 
 1. `cd {specific_folder}`
 2. `npm test`
